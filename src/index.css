@@ -1,10 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --font-family: 'Inter', sans-serif;
+}
+
+.light-mode {
+  --color-text-primary: rgb(55, 53, 47);
+  --color-text-secondary: rgba(55, 53, 47, 0.65);
+  --color-text-tertiary: rgba(55, 53, 47, 0.45);
+  --color-bg-primary: rgb(251, 251, 250);
+  --color-bg-secondary: rgb(255, 255, 255);
+  --color-border: rgba(233, 233, 231, 1);
+  --color-accent: rgb(3, 167, 145);
+  --color-accent--hover: rgba(3, 167, 145, 0.8);
+  --color-error: rgb(235, 87, 87);
+  --color-shadow: rgba(15, 15, 15, 0.05);
+  --color-toggle-bg: rgba(55, 53, 47, 0.1);
+  --color-toggle-bg--hover: rgba(55, 53, 47, 0.15);
+}
+
+.dark-mode {
+  --color-text-primary: rgba(255, 255, 255, 0.9);
+  --color-text-secondary: rgba(255, 255, 255, 0.65);
+  --color-text-tertiary: rgba(255, 255, 255, 0.45);
+  --color-bg-primary: rgb(25, 25, 25);
+  --color-bg-secondary: rgb(37, 37, 37);
+  --color-border: rgba(64, 64, 64, 1);
+  --color-accent: rgb(3, 167, 145);
+  --color-accent--hover: rgba(3, 167, 145, 0.8);
+  --color-error: rgb(235, 87, 87);
+  --color-shadow: rgba(0, 0, 0, 0.3);
+  --color-toggle-bg: rgba(255, 255, 255, 0.1);
+  --color-toggle-bg--hover: rgba(255, 255, 255, 0.15);
+}
+
 /* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-family);
 }
