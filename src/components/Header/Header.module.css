@@ -8,9 +8,8 @@
     border-color 0.3s ease;
 }
 
-.header :global(.container) {
+.header :global(.pageContainer) {
   justify-content: space-between;
-  align-items: center;
 }
 
 .title {
