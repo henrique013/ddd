@@ -3,6 +3,7 @@
 
 :root {
   --font-family: 'Inter', sans-serif;
+  --width-max: 540px;
 }
 
 .light-mode {
@@ -44,9 +45,9 @@
 }
 
 .container {
-  width: 100%;
   height: 100%;
-  max-width: 540px;
+  width: 100%;
+  max-width: var(--width-max);
   margin: 0 auto;
   display: flex;
 }
