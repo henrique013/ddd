@@ -1,9 +1,9 @@
+import Header from '@/components/Header/Header'
+
 function App() {
   return (
     <>
-      <header>
-        <h1>DDD Brasil - Busca de Cidades por DDD</h1>
-      </header>
+      <Header />
     </>
   )
 }

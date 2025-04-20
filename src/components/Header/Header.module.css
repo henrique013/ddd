@@ -1,0 +1,25 @@
+.header {
+  height: 80px;
+  padding: 1rem;
+  background-color: var(--color-bg-secondary);
+  border-bottom: 1px solid var(--color-border);
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.header :global(.container) {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.title i {
+  color: var(--color-accent);
+  margin-right: 0.2rem;
+}
