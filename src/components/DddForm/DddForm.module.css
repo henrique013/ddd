@@ -1,0 +1,59 @@
+.dddForm {
+  margin-bottom: 1.5rem;
+}
+
+.dddForm :global(.dddLabel) {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-secondary);
+  transition: color 0.3s ease;
+}
+
+.dddForm :global(.inputGroup) {
+  display: flex;
+}
+
+.dddForm :global(.dddInput) {
+  flex: 1;
+  padding: 0.625rem 0.75rem;
+  font-size: 0.875rem;
+  font-family: var(--font-family);
+  border: 1px solid var(--color-border);
+  border-right: none;
+  border-radius: 3px 0 0 3px;
+  outline: none;
+  transition:
+    border-color 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-secondary);
+}
+
+.dddForm :global(.dddInput:focus) {
+  border-color: var(--color-accent);
+}
+
+.dddForm :global(.btn) {
+  padding: 0.625rem 0.875rem;
+  font-size: 0.875rem;
+  font-family: var(--font-family);
+  font-weight: 500;
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+}
+
+.dddForm :global(.btn:hover) {
+  background-color: var(--color-accent--hover);
+}
+
+.dddForm :global(.errorMessage) {
+  margin-top: 0.5rem;
+  color: var(--color-error);
+  font-size: 0.75rem;
+}

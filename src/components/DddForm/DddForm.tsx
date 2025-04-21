@@ -1,0 +1,65 @@
+import styles from '@/components/DddForm/DddForm.module.css'
+import { useState } from 'react'
+
+type Props = {
+  onSuccess: (cities: string[]) => void
+  onError: () => void
+}
+
+function DddForm(props: Props) {
+  const [errorMsg, setErrorMsg] = useState('')
+  const [ddd, setDdd] = useState('')
+
+  const findCityByDdd = () => {
+    if (ddd.length !== 2) {
+      setErrorMsg('DDD deve conter exatamente 2 dígitos')
+      props.onError()
+      return
+    }
+
+    //TODO: Buscar cidade pelo DDD
+    let cities: string[] = []
+    if (ddd === '11') {
+      cities = ['São Paulo', 'Guarulhos', 'Campinas', 'São Bernardo do Campo', 'Santo André']
+    }
+
+    if (!cities.length) {
+      setErrorMsg('DDD não encontrado')
+      props.onError()
+      return
+    }
+
+    if (errorMsg) {
+      setErrorMsg('')
+    }
+
+    props.onSuccess(cities)
+  }
+
+  return (
+    <div className={styles.dddForm}>
+      <label htmlFor="dddInput" className="dddLabel">
+        DDD (Código de Área)
+      </label>
+      <div className="inputGroup">
+        <input
+          type="text"
+          id="dddInput"
+          className="dddInput"
+          placeholder="Ex: 11"
+          maxLength={2}
+          pattern="[0-9]*"
+          inputMode="numeric"
+          value={ddd}
+          onChange={(e) => setDdd(e.target.value)}
+        />
+        <button className="btn" onClick={findCityByDdd}>
+          Buscar
+        </button>
+      </div>
+      {errorMsg && <div className="errorMessage">{errorMsg}</div>}
+    </div>
+  )
+}
+
+export default DddForm
