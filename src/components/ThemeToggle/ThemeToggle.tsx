@@ -1,6 +1,6 @@
-import styles from '@/components/Header/HeaderToggle.module.css'
+import styles from '@/components/ThemeToggle/ThemeToggle.module.css'
 
-function HeaderToggle() {
+function ThemeToggle() {
   return (
     <button id="themeToggle" className={styles.themeToggle} aria-label="Alternar modo escuro">
       {/* Moon icon (for light mode) */}
@@ -11,4 +11,4 @@ function HeaderToggle() {
   )
 }
 
-export default HeaderToggle
+export default ThemeToggle

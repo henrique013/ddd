@@ -12,13 +12,11 @@
   justify-content: space-between;
 }
 
-.title {
-  font-size: 1.25rem;
-  font-weight: 600;
+.header h1 {
   color: var(--color-text-primary);
 }
 
-.title i {
+.header h1 i {
   color: var(--color-accent);
   margin-right: 0.2rem;
 }

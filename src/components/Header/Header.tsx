@@ -1,14 +1,14 @@
 import styles from '@/components/Header/Header.module.css'
-import HeaderToggle from '@/components/Header/HeaderToggle'
+import ThemeToggle from '@/components/ThemeToggle/ThemeToggle'
 
 function Header() {
   return (
     <header className={styles.header}>
       <div className="pageContainer">
-        <h1 className={styles.title}>
+        <h1>
           <i className="bx bxs-phone"></i>DDD Brasil
         </h1>
-        <HeaderToggle />
+        <ThemeToggle />
       </div>
     </header>
   )

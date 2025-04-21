@@ -60,6 +60,16 @@ body > .root {
   flex-direction: column;
 }
 
+h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
 .pageContainer {
   height: 100%;
   width: 100%;
@@ -72,4 +82,15 @@ body > .root {
 
 .hidden {
   display: none;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
 }
