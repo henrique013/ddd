@@ -44,6 +44,22 @@
   font-family: var(--font-family);
 }
 
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  line-height: 1.5;
+  min-height: 100vh;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+body > .root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .pageContainer {
   height: 100%;
   width: 100%;
@@ -56,8 +72,4 @@
 
 .hidden {
   display: none;
-}
-
-body {
-  line-height: 1.5;
 }
