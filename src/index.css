@@ -71,13 +71,9 @@ h2 {
 }
 
 .pageContainer {
-  height: 100%;
   width: 100%;
   max-width: var(--width-max);
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .hidden {
