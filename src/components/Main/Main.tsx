@@ -3,7 +3,7 @@ import styles from '@/components/Main/Main.module.css'
 function Main() {
   return (
     <main className={styles.main}>
-      <div className="pageContainer">Test</div>
+      <div className="pageContainer"></div>
     </main>
   )
 }
