@@ -10,12 +10,7 @@ function ThemeToggle(props: Props) {
   const type = props.theme === 'light' ? 'moon' : 'sun'
 
   return (
-    <button
-      id="themeToggle"
-      className={styles.themeToggle}
-      aria-label="Alternar modo escuro"
-      onClick={props.onToggleTheme}
-    >
+    <button className={styles.themeToggle} aria-label="Alternar modo escuro" onClick={props.onToggleTheme}>
       <i className={`bx bx-${type}`}></i>
     </button>
   )
