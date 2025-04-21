@@ -7,19 +7,28 @@ import { useState } from 'react'
 export type Theme = 'light' | 'dark'
 
 function App() {
-  const [theme, setTheme] = useState<Theme>('light')
+  const [theme, setTheme] = useState<Theme>(getInitialTheme)
 
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'))
+  const onToggleTheme = () => {
+    setTheme((prevTheme) => {
+      const newTheme = prevTheme === 'light' ? 'dark' : 'light'
+      localStorage.setItem('theme', newTheme)
+      return newTheme
+    })
   }
 
   return (
     <div className={`${styles.app} ${theme}`}>
-      <Header theme={theme} onToggleTheme={toggleTheme} />
+      <Header theme={theme} onToggleTheme={onToggleTheme} />
       <Main />
       <Footer />
     </div>
   )
+}
+
+function getInitialTheme(): Theme {
+  const savedTheme = localStorage.getItem('theme')
+  return (savedTheme as Theme) || 'light'
 }
 
 export default App
