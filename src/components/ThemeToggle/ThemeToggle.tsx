@@ -1,12 +1,22 @@
 import styles from '@/components/ThemeToggle/ThemeToggle.module.css'
+import { Theme } from '@/components/App/App'
 
-function ThemeToggle() {
+type Props = {
+  theme: Theme
+  onToggleTheme: () => void
+}
+
+function ThemeToggle(props: Props) {
+  const type = props.theme === 'light' ? 'moon' : 'sun'
+
   return (
-    <button id="themeToggle" className={styles.themeToggle} aria-label="Alternar modo escuro">
-      {/* Moon icon (for light mode) */}
-      <i id="moonIcon" className="bx bx-moon"></i>
-      {/* Sun icon (for dark mode) */}
-      <i id="sunIcon" className="bx bx-sun hidden"></i>
+    <button
+      id="themeToggle"
+      className={styles.themeToggle}
+      aria-label="Alternar modo escuro"
+      onClick={props.onToggleTheme}
+    >
+      <i className={`bx bx-${type}`}></i>
     </button>
   )
 }
