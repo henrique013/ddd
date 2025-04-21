@@ -3,6 +3,9 @@
   padding: 1rem;
   border-top: 1px solid var(--color-border);
   transition: border-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer p {
