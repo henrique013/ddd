@@ -4,6 +4,9 @@
 :root {
   --font-family: 'Inter', sans-serif;
   --width-max: 540px;
+  --color-accent: rgb(3, 167, 145);
+  --color-accent--hover: rgba(3, 167, 145, 0.8);
+  --color-error: rgb(235, 87, 87);
 }
 
 .lightMode {
@@ -13,9 +16,6 @@
   --color-bg-primary: rgb(251, 251, 250);
   --color-bg-secondary: rgb(255, 255, 255);
   --color-border: rgba(233, 233, 231, 1);
-  --color-accent: rgb(3, 167, 145);
-  --color-accent--hover: rgba(3, 167, 145, 0.8);
-  --color-error: rgb(235, 87, 87);
   --color-shadow: rgba(15, 15, 15, 0.05);
   --color-toggle-bg: rgba(55, 53, 47, 0.1);
   --color-toggle-bg--hover: rgba(55, 53, 47, 0.15);
@@ -28,9 +28,6 @@
   --color-bg-primary: rgb(25, 25, 25);
   --color-bg-secondary: rgb(37, 37, 37);
   --color-border: rgba(64, 64, 64, 1);
-  --color-accent: rgb(3, 167, 145);
-  --color-accent--hover: rgba(3, 167, 145, 0.8);
-  --color-error: rgb(235, 87, 87);
   --color-shadow: rgba(0, 0, 0, 0.3);
   --color-toggle-bg: rgba(255, 255, 255, 0.1);
   --color-toggle-bg--hover: rgba(255, 255, 255, 0.15);
