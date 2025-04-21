@@ -1,9 +1,10 @@
 import styles from '@/components/Main/Main.module.css'
-
+import CityFinder from '@/components/CityFinder/CityFinder'
 function Main() {
   return (
     <main className={styles.main}>
       <div className="pageContainer">
+        <CityFinder />
         <div className="helperText">
           <p className="textMuted">Digite um DDD brasileiro para ver as principais cidades</p>
           <p className="textSmall">Exemplos: 11 (São Paulo), 21 (Rio de Janeiro), 31 (Belo Horizonte)</p>
