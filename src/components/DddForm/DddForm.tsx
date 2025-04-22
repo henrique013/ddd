@@ -52,6 +52,11 @@ function DddForm(props: Props) {
           inputMode="numeric"
           value={ddd}
           onChange={(e) => setDdd(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+              findCitiesByDdd()
+            }
+          }}
         />
         <button className="btn" onClick={findCitiesByDdd}>
           Buscar
