@@ -2,7 +2,7 @@ import styles from '@/components/DddForm/DddForm.module.css'
 import { useState } from 'react'
 
 type Props = {
-  onSuccess: (cities: string[]) => void
+  onSuccess: (ddd: string, cities: string[]) => void
   onError: () => void
 }
 
@@ -10,7 +10,7 @@ function DddForm(props: Props) {
   const [errorMsg, setErrorMsg] = useState('')
   const [ddd, setDdd] = useState('')
 
-  const findCityByDdd = () => {
+  const findCitiesByDdd = () => {
     if (ddd.length !== 2) {
       setErrorMsg('DDD deve conter exatamente 2 dígitos')
       props.onError()
@@ -33,7 +33,7 @@ function DddForm(props: Props) {
       setErrorMsg('')
     }
 
-    props.onSuccess(cities)
+    props.onSuccess(ddd, cities)
   }
 
   return (
@@ -53,7 +53,7 @@ function DddForm(props: Props) {
           value={ddd}
           onChange={(e) => setDdd(e.target.value)}
         />
-        <button className="btn" onClick={findCityByDdd}>
+        <button className="btn" onClick={findCitiesByDdd}>
           Buscar
         </button>
       </div>

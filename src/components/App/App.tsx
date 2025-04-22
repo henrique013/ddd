@@ -9,7 +9,7 @@ export type Theme = 'light' | 'dark'
 function App() {
   const [theme, setTheme] = useState<Theme>(getInitialTheme)
 
-  const onToggleTheme = () => {
+  const handleToggleTheme = () => {
     setTheme((prevTheme) => {
       const newTheme = prevTheme === 'light' ? 'dark' : 'light'
       localStorage.setItem('theme', newTheme)
@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div className={`${styles.app} ${theme}`}>
-      <Header theme={theme} onToggleTheme={onToggleTheme} />
+      <Header theme={theme} onToggleTheme={handleToggleTheme} />
       <Main />
       <Footer />
     </div>
