@@ -36,7 +36,6 @@ Esta seção deve incluir o propósito do projeto, principais funcionalidades e 
 - **📱 Mobile First:** Design otimizado prioritariamente para dispositivos móveis, garantindo uma experiência perfeita em smartphones e tablets
 - **🌙 Dark Theme:** Suporte completo a tema escuro, que se adapta automaticamente às preferências do sistema do usuário
 - **🧹 Interface Minimalista:** Design limpo e intuitivo focado na usabilidade
-- **♿ Acessibilidade:** Desenvolvido seguindo as melhores práticas de acessibilidade web
 
 ## 📋 Pré-requisitos
 
