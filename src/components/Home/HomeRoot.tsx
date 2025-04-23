@@ -1,4 +1,5 @@
 import styles from '@/components/Home/HomeRoot.module.css'
+import { useTheme } from '@/hooks/useTheme.ts'
 import { ReactNode } from 'react'
 
 type Props = {
@@ -6,7 +7,9 @@ type Props = {
 }
 
 function HomeRoot({ children }: Props) {
-  return <div className={`${styles.homeRoot} light`}>{children}</div>
+  const { theme } = useTheme()
+
+  return <div className={`${styles.homeRoot} ${theme}`}>{children}</div>
 }
 
 export default HomeRoot
