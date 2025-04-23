@@ -1,4 +1,4 @@
-import styles from '@/components/DddForm/DddForm.module.css'
+import styles from '@/components/CitiesFinder/CitiesFinderForm.module.css'
 import { useState } from 'react'
 
 type Props = {
@@ -6,7 +6,7 @@ type Props = {
   onError: () => void
 }
 
-function DddForm(props: Props) {
+function CitiesFinderForm(props: Props) {
   const [errorMsg, setErrorMsg] = useState('')
   const [ddd, setDdd] = useState('')
 
@@ -37,7 +37,7 @@ function DddForm(props: Props) {
   }
 
   return (
-    <div className={styles.dddForm}>
+    <div className={styles.citiesFinderForm}>
       <label htmlFor="dddInput" className="dddLabel">
         DDD (Código de Área)
       </label>
@@ -67,4 +67,4 @@ function DddForm(props: Props) {
   )
 }
 
-export default DddForm
+export default CitiesFinderForm

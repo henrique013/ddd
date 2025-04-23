@@ -1,8 +1,8 @@
-.dddForm {
+.citiesFinderForm {
   margin-bottom: 1.5rem;
 }
 
-.dddForm :global(.dddLabel) {
+.citiesFinderForm :global(.dddLabel) {
   display: block;
   font-size: 0.875rem;
   font-weight: 500;
@@ -11,11 +11,11 @@
   transition: color 0.3s ease;
 }
 
-.dddForm :global(.inputGroup) {
+.citiesFinderForm :global(.inputGroup) {
   display: flex;
 }
 
-.dddForm :global(.dddInput) {
+.citiesFinderForm :global(.dddInput) {
   flex: 1;
   padding: 0.625rem 0.75rem;
   font-size: 0.875rem;
@@ -32,11 +32,11 @@
   background-color: var(--color-bg-secondary);
 }
 
-.dddForm :global(.dddInput:focus) {
+.citiesFinderForm :global(.dddInput:focus) {
   border-color: var(--color-accent);
 }
 
-.dddForm :global(.btn) {
+.citiesFinderForm :global(.btn) {
   padding: 0.625rem 0.875rem;
   font-size: 0.875rem;
   font-family: var(--font-family);
@@ -48,11 +48,11 @@
   cursor: pointer;
 }
 
-.dddForm :global(.btn:hover) {
+.citiesFinderForm :global(.btn:hover) {
   background-color: var(--color-accent--hover);
 }
 
-.dddForm :global(.errorMessage) {
+.citiesFinderForm :global(.errorMessage) {
   margin-top: 0.5rem;
   color: var(--color-error);
   font-size: 0.75rem;
