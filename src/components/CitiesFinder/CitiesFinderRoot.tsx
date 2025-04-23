@@ -1,4 +1,4 @@
-import styles from '@/components/CitiesFinder/CitiesFinder.module.css'
+import styles from '@/components/CitiesFinder/CitiesFinderRoot.module.css'
 import DddForm from '@/components/DddForm/DddForm'
 import CitiesList from '@/components/CitiesList/CitiesList'
 import { useState } from 'react'
@@ -8,7 +8,7 @@ type Result = {
   cities: string[]
 }
 
-function CitiesFinder() {
+function CitiesFinderRoot() {
   const [result, setResult] = useState<Result>({ ddd: '', cities: [] })
 
   const handleSuccess = (ddd: string, citiesFound: string[]) => {
@@ -20,7 +20,7 @@ function CitiesFinder() {
   }
 
   return (
-    <div className={styles.citiesFinder}>
+    <div className={styles.citiesFinderRoot}>
       <h2>Busca de Cidades por DDD</h2>
       <DddForm onSuccess={handleSuccess} onError={handleError} />
       {result.cities.length > 0 && <CitiesList ddd={result.ddd} cities={result.cities} />}
@@ -28,4 +28,4 @@ function CitiesFinder() {
   )
 }
 
-export default CitiesFinder
+export default CitiesFinderRoot

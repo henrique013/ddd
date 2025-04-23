@@ -1,4 +1,4 @@
-.citiesFinder {
+.citiesFinderRoot {
   background-color: var(--color-bg-secondary);
   border-radius: 3px;
   box-shadow: 0 1px 3px var(--color-shadow);
@@ -11,6 +11,6 @@
   padding: 2rem;
 }
 
-.citiesFinder > h2 {
+.citiesFinderRoot > h2 {
   margin-bottom: 1.5rem;
 }
