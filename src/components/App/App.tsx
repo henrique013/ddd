@@ -6,13 +6,15 @@ import { useState } from 'react'
 
 export type Theme = 'light' | 'dark'
 
+const STORAGE_KEY = '@ddd:theme'
+
 function App() {
   const [theme, setTheme] = useState<Theme>(getInitialTheme)
 
   const handleToggleTheme = () => {
     setTheme((prevTheme) => {
       const newTheme = prevTheme === 'light' ? 'dark' : 'light'
-      localStorage.setItem('theme', newTheme)
+      localStorage.setItem(STORAGE_KEY, newTheme)
       return newTheme
     })
   }
@@ -27,7 +29,7 @@ function App() {
 }
 
 function getInitialTheme(): Theme {
-  const savedTheme = localStorage.getItem('theme')
+  const savedTheme = localStorage.getItem(STORAGE_KEY)
   return (savedTheme as Theme) || 'light'
 }
 
