@@ -1,5 +1,9 @@
 # 📞 DDD Brasil - Busca de Cidades por DDD
 
+<p align="center">
+  <img src="public/images/screenshot.png" alt="DDD Brasil - Interface da aplicação" width="850" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+</p>
+
 ## 🔎 Sobre o Projeto
 
 O DDD Brasil é uma aplicação web moderna e intuitiva que permite aos usuários consultar rapidamente quais cidades pertencem a cada DDD (Discagem Direta à Distância) no território brasileiro.
@@ -48,8 +52,8 @@ Siga estes passos para configurar o ambiente de desenvolvimento:
 1. Clone o repositório
 
    ```bash
-   git clone https://github.com/seu-usuario/ddd-brasil.git
-   cd ddd-brasil
+   git clone git@github.com:henrique013/ddd.git
+   cd ddd
    ```
 
 2. Instale as dependências
@@ -80,7 +84,7 @@ O projeto estará disponível em [http://localhost:5173](http://localhost:5173)
 - `npm run dev` - Inicia o servidor de desenvolvimento
 - `npm run build` - Gera uma versão otimizada para produção
 - `npm run lint` - Executa a verificação de linting no código
-- `npm run preview` - Previsualiza a versão de produção localmente
+- `npm run preview` - Previsualiza a versão de produção localmente _(requer execução prévia de `npm run build`)_
 
 ## 📁 Estrutura do Projeto
 
@@ -100,8 +104,5 @@ ddd/
 
 ## 📧 Contato
 
-<!-- Adicione suas informações de contato aqui -->
-
----
-
-Desenvolvido com dedicação por [Henrique Alves](https://github.com/henrique013)
+- LinkedIn: [Henrique Alves](https://www.linkedin.com/in/henrique-alves-a44b99135)
+- GitHub: [henrique013](https://github.com/henrique013)
