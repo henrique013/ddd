@@ -1,9 +1,9 @@
-import styles from '@/components/Main/Main.module.css'
+import styles from '@/components/Main/MainRoot.module.css'
 import { CitiesFinder } from '@/components/CitiesFinder'
 
-function Main() {
+function MainRoot() {
   return (
-    <main className={styles.main}>
+    <main className={styles.mainRoot}>
       <div className="pageContainer">
         <CitiesFinder.Root />
         <div className="helperText">
@@ -15,4 +15,4 @@ function Main() {
   )
 }
 
-export default Main
+export default MainRoot
