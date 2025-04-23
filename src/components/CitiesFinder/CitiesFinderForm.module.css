@@ -57,3 +57,20 @@
   color: var(--color-error);
   font-size: 0.75rem;
 }
+
+@media (max-width: 480px) {
+  .citiesFinderForm :global(.inputGroup) {
+    flex-direction: column;
+  }
+
+  .citiesFinderForm :global(.dddInput) {
+    border-radius: 3px 3px 0 0;
+    border-right: 1px solid var(--color-border);
+    border-bottom: none;
+  }
+
+  .citiesFinderForm :global(.btn) {
+    border-radius: 0 0 3px 3px;
+    width: 100%;
+  }
+}
