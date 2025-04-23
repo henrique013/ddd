@@ -1,4 +1,5 @@
 import styles from '@/components/CitiesFinder/CitiesFinderForm.module.css'
+import container from '@/conf/container'
 import { useState } from 'react'
 
 type Props = {
@@ -10,30 +11,27 @@ function CitiesFinderForm(props: Props) {
   const [errorMsg, setErrorMsg] = useState('')
   const [ddd, setDdd] = useState('')
 
-  const findCitiesByDdd = () => {
+  const findCitiesByDdd = async () => {
     if (ddd.length !== 2) {
       setErrorMsg('DDD deve conter exatamente 2 dígitos')
       props.onError()
       return
     }
 
-    //TODO: Buscar cidade pelo DDD
-    let cities: string[] = []
-    if (ddd === '11') {
-      cities = ['São Paulo', 'Guarulhos', 'Campinas', 'São Bernardo do Campo', 'Santo André']
-    }
+    try {
+      const client = container.brasilApiClient()
+      const cities = await client.getCitiesByDdd(ddd)
 
-    if (!cities.length) {
-      setErrorMsg('DDD não encontrado')
+      if (errorMsg) {
+        setErrorMsg('')
+      }
+
+      props.onSuccess(ddd, cities)
+    } catch (error: unknown) {
+      console.error(error)
+      setErrorMsg('Não foi possível buscar as cidades')
       props.onError()
-      return
     }
-
-    if (errorMsg) {
-      setErrorMsg('')
-    }
-
-    props.onSuccess(ddd, cities)
   }
 
   return (
