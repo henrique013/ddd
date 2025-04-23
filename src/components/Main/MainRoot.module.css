@@ -4,21 +4,3 @@
   justify-content: center;
   align-items: center;
 }
-
-.mainRoot :global(.helperText) {
-  margin-top: 1.5rem;
-  text-align: center;
-}
-
-.mainRoot :global(.textMuted) {
-  font-size: 0.875rem;
-  color: var(--color-text-secondary);
-  transition: color 0.3s ease;
-}
-
-.mainRoot :global(.textSmall) {
-  font-size: 0.75rem;
-  margin-top: 0.25rem;
-  color: var(--color-text-tertiary);
-  transition: color 0.3s ease;
-}

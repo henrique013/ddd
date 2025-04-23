@@ -1,4 +1,4 @@
-.citiesFinderRoot {
+.citiesFinderRoot :global(.content) {
   background-color: var(--color-bg-secondary);
   border-radius: 3px;
   box-shadow: 0 1px 3px var(--color-shadow);
@@ -11,6 +11,24 @@
   padding: 2rem;
 }
 
-.citiesFinderRoot > h2 {
+.citiesFinderRoot :global(.title) {
   margin-bottom: 1.5rem;
+}
+
+.citiesFinderRoot :global(.helperText) {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.citiesFinderRoot :global(.textMuted) {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  transition: color 0.3s ease;
+}
+
+.citiesFinderRoot :global(.textSmall) {
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  color: var(--color-text-tertiary);
+  transition: color 0.3s ease;
 }
