@@ -1,13 +1,13 @@
-import styles from '@/components/CitiesList/CitiesList.module.css'
+import styles from '@/components/CitiesFinder/CitiesFinderList.module.css'
 
 type Props = {
   ddd: string
   cities: string[]
 }
 
-function CitiesList(props: Props) {
+function CitiesFinderList(props: Props) {
   return (
-    <div className={styles.citiesList}>
+    <div className={styles.citiesFinderList}>
       <h3>Cidades com DDD {props.ddd}:</h3>
       <ul>
         {props.cities.map((city) => (
@@ -18,4 +18,4 @@ function CitiesList(props: Props) {
   )
 }
 
-export default CitiesList
+export default CitiesFinderList

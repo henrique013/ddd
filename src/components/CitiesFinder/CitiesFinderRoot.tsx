@@ -1,6 +1,6 @@
 import styles from '@/components/CitiesFinder/CitiesFinderRoot.module.css'
 import DddForm from '@/components/DddForm/DddForm'
-import CitiesList from '@/components/CitiesList/CitiesList'
+import { CitiesFinder } from '@/components/CitiesFinder'
 import { useState } from 'react'
 
 type Result = {
@@ -23,7 +23,7 @@ function CitiesFinderRoot() {
     <div className={styles.citiesFinderRoot}>
       <h2>Busca de Cidades por DDD</h2>
       <DddForm onSuccess={handleSuccess} onError={handleError} />
-      {result.cities.length > 0 && <CitiesList ddd={result.ddd} cities={result.cities} />}
+      {result.cities.length > 0 && <CitiesFinder.List ddd={result.ddd} cities={result.cities} />}
     </div>
   )
 }
