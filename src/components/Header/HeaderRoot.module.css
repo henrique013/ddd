@@ -1,4 +1,4 @@
-.header {
+.headerRoot {
   height: 80px;
   padding: 1rem;
   background-color: var(--color-bg-secondary);
@@ -11,17 +11,17 @@
   align-items: center;
 }
 
-.header :global(.pageContainer) {
+.headerRoot :global(.pageContainer) {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.header h1 {
+.headerRoot h1 {
   color: var(--color-text-primary);
 }
 
-.header h1 i {
+.headerRoot h1 i {
   color: var(--color-accent);
   margin-right: 0.2rem;
 }

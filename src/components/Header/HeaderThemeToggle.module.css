@@ -1,4 +1,4 @@
-.themeToggle {
+.headerThemeToggle {
   background-color: var(--color-toggle-bg);
   border: none;
   width: 36px;
@@ -11,11 +11,11 @@
   transition: background-color 0.3s ease;
 }
 
-.themeToggle:hover {
+.headerThemeToggle:hover {
   background-color: var(--color-toggle-bg--hover);
 }
 
-.themeToggle i {
+.headerThemeToggle i {
   font-size: 18px;
   color: var(--color-text-secondary);
   transition: color 0.3s ease;

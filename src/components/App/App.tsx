@@ -1,8 +1,8 @@
 import styles from '@/components/App/App.module.css'
-import Header from '@/components/Header/Header'
 import Main from '@/components/Main/Main'
 import Footer from '@/components/Footer/Footer'
 import { useState } from 'react'
+import { Header } from '@/components/Header'
 
 export type Theme = 'light' | 'dark'
 
@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className={`${styles.app} ${theme}`}>
-      <Header theme={theme} onToggleTheme={handleToggleTheme} />
+      <Header.Root theme={theme} onToggleTheme={handleToggleTheme} />
       <Main />
       <Footer />
     </div>
