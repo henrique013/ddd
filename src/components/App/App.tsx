@@ -1,6 +1,6 @@
 import styles from '@/components/App/App.module.css'
 import Main from '@/components/Main/Main'
-import Footer from '@/components/Footer/Footer'
+import { Footer } from '@/components/Footer'
 import { useState } from 'react'
 import { Header } from '@/components/Header'
 
@@ -23,7 +23,7 @@ function App() {
     <div className={`${styles.app} ${theme}`}>
       <Header.Root theme={theme} onToggleTheme={handleToggleTheme} />
       <Main />
-      <Footer />
+      <Footer.Root />
     </div>
   )
 }

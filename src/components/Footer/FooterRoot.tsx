@@ -1,8 +1,8 @@
-import styles from '@/components/Footer/Footer.module.css'
+import styles from '@/components/Footer/FooterRoot.module.css'
 
-function Footer() {
+function FooterRoot() {
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footerRoot}>
       <div className="pageContainer">
         <p>
           Desenvolvido com dedicação por
@@ -15,4 +15,4 @@ function Footer() {
   )
 }
 
-export default Footer
+export default FooterRoot
