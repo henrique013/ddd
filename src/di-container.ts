@@ -14,7 +14,8 @@ export type Container = {
 const container: Container = {
   brasilApiClient: () => {
     if (!cache.has('brasilApiClient')) {
-      cache.set('brasilApiClient', new BrasilApiClient('https://brasilapi.com.br/api'))
+      const baseUrl = import.meta.env.VITE_API_URL
+      cache.set('brasilApiClient', new BrasilApiClient(baseUrl))
     }
     return cache.get('brasilApiClient') as BrasilApiClient
   },

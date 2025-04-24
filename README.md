@@ -68,6 +68,18 @@ Siga estes passos para configurar o ambiente de desenvolvimento:
    yarn install
    ```
 
+## 🔐 Configuração de Variáveis de Ambiente
+
+Para que a aplicação funcione corretamente, é necessário configurar as variáveis de ambiente.
+
+Copie o arquivo `.env.example` para um novo arquivo chamado `.env`:
+
+```bash
+cp .env.example .env
+```
+
+Ajuste os valores das variáveis de ambiente caso necessário.
+
 ## ▶️ Executando o Projeto
 
 Para iniciar o servidor de desenvolvimento:
