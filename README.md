@@ -4,6 +4,10 @@
   <img src="public/images/screenshot.png" alt="DDD Brasil - Interface da aplicação" width="850" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
 </p>
 
+## 🌐 Acesso Online
+
+Você pode acessar a versão online do projeto [aqui](https://ddd-six-azure.vercel.app/).
+
 ## 🔎 Sobre o Projeto
 
 O DDD Brasil é uma aplicação web moderna e intuitiva que permite aos usuários consultar rapidamente quais cidades pertencem a cada DDD (Discagem Direta à Distância) no território brasileiro.
