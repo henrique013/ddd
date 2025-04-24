@@ -50,6 +50,31 @@
   font-family: var(--font-family);
 }
 
+/* Scrollbar styles */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-border);
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-accent);
+}
+
+/* Typography */
+
 h1 {
   font-size: 1.25rem;
   font-weight: 600;
@@ -68,6 +93,8 @@ h3 {
 p {
   font-size: 0.875rem;
 }
+
+/* Containers */
 
 .pageContainer {
   width: 100%;
