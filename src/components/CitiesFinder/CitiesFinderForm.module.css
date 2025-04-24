@@ -13,6 +13,7 @@
 
 .citiesFinderForm :global(.inputGroup) {
   display: flex;
+  flex-direction: column;
 }
 
 .citiesFinderForm :global(.dddInput) {
@@ -21,8 +22,8 @@
   font-size: 0.875rem;
   font-family: var(--font-family);
   border: 1px solid var(--color-border);
-  border-right: none;
-  border-radius: 3px 0 0 3px;
+  border-bottom: none;
+  border-radius: 3px 3px 0 0;
   outline: none;
   transition:
     border-color 0.3s ease,
@@ -44,7 +45,8 @@
   background-color: var(--color-accent);
   color: white;
   border: none;
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 0 3px 3px;
+  width: 100%;
   cursor: pointer;
 }
 
@@ -58,19 +60,19 @@
   font-size: 0.75rem;
 }
 
-@media (max-width: 480px) {
+@media (min-width: 640px) {
   .citiesFinderForm :global(.inputGroup) {
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .citiesFinderForm :global(.dddInput) {
-    border-radius: 3px 3px 0 0;
-    border-right: 1px solid var(--color-border);
-    border-bottom: none;
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+    border-radius: 3px 0 0 3px;
   }
 
   .citiesFinderForm :global(.btn) {
-    border-radius: 0 0 3px 3px;
-    width: 100%;
+    border-radius: 0 3px 3px 0;
+    width: auto;
   }
 }
