@@ -91,18 +91,22 @@ O projeto estará disponível em [http://localhost:5173](http://localhost:5173)
 
 ## 📁 Estrutura do Projeto
 
+Estes são os arquivos e diretórios principais do projeto:
+
 ```
 ddd/
-├── public/         # Arquivos estáticos
+├── public/             # Arquivos estáticos
 ├── src/
-│   ├── assets/     # Imagens e outros recursos
-│   ├── components/ # Componentes React reutilizáveis
-│   ├── contexts/   # Contextos React
-│   ├── hooks/      # Custom hooks
-│   ├── services/   # Serviços e APIs
-│   └── conf/       # Configurações
-├── index.html      # Página HTML principal
-└── ...             # Arquivos de configuração
+│   ├── assets/         # Imagens e outros recursos
+│   ├── components/     # Componentes React reutilizáveis
+│   ├── contexts/       # Contextos React
+│   ├── hooks/          # Custom hooks
+│   ├── services/       # Serviços e APIs
+│   ├── di-container.ts # Container de injeção de dependências
+│   ├── index.css       # Estilos globais
+│   └── main.tsx        # Ponto de entrada da aplicação
+├── index.html          # Página HTML principal
+└── ...                 # Arquivos de configuração
 ```
 
 ## 📧 Contato

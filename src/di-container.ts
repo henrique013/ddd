@@ -1,3 +1,8 @@
+/*
+ * Dependency Injection container for managing application dependencies.
+ * This file centralizes dependencies instantiation and enables singleton pattern through caching.
+ */
+
 import { BrasilApiClient, IBrasilApiClient } from '@/services/BrasilApiClient'
 
 const cache: Map<string, unknown> = new Map()

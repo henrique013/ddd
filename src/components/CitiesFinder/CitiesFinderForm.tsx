@@ -1,5 +1,5 @@
 import styles from '@/components/CitiesFinder/CitiesFinderForm.module.css'
-import container from '@/conf/container'
+import container from '@/di-container'
 import { useState } from 'react'
 
 type Props = {
