@@ -50,6 +50,33 @@
   cursor: pointer;
 }
 
+.citiesFinderForm :global(.btn i) {
+  display: none;
+}
+
+.citiesFinderForm :global(.btn:disabled) {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.citiesFinderForm :global(.btn:disabled span) {
+  display: none;
+}
+
+.citiesFinderForm :global(.btn:disabled i) {
+  display: block;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .citiesFinderForm :global(.btn:hover) {
   background-color: var(--color-accent--hover);
 }
@@ -73,6 +100,6 @@
 
   .citiesFinderForm :global(.btn) {
     border-radius: 0 3px 3px 0;
-    width: auto;
+    width: 80px;
   }
 }

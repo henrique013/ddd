@@ -5,19 +5,19 @@ import { useState } from 'react'
 function CitiesFinderRoot() {
   const [cities, setCities] = useState<string[]>([])
 
-  const handleSuccess = (citiesFound: string[]) => {
-    setCities(citiesFound)
+  const handleStart = () => {
+    setCities([])
   }
 
-  const handleError = () => {
-    setCities([])
+  const handleSuccess = (citiesFound: string[]) => {
+    setCities(citiesFound)
   }
 
   return (
     <div className={styles.citiesFinderRoot}>
       <div className="content">
         <h2 className="title">Busca de Cidades por DDD</h2>
-        <CitiesFinder.Form onSuccess={handleSuccess} onError={handleError} />
+        <CitiesFinder.Form onStart={handleStart} onSuccess={handleSuccess} />
         {cities.length > 0 && <CitiesFinder.List cities={cities} />}
       </div>
       <div className="helperText">

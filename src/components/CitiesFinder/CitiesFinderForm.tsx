@@ -1,26 +1,31 @@
 import styles from '@/components/CitiesFinder/CitiesFinderForm.module.css'
 import container from '@/di-container'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
+import { delay } from '@/utils/time'
 
 type Props = {
+  onStart: () => void
   onSuccess: (cities: string[]) => void
-  onError: () => void
 }
 
-function CitiesFinderForm({ onSuccess, onError }: Props) {
+function CitiesFinderForm({ onStart, onSuccess }: Props) {
   const [errorMsg, setErrorMsg] = useState('')
   const [ddd, setDdd] = useState('')
+  const btnRef = useRef<HTMLButtonElement>(null)
 
   const findCitiesByDdd = async () => {
+    onStart()
+
     if (ddd.length !== 2) {
       setErrorMsg('DDD deve conter exatamente 2 dígitos')
-      onError()
       return
     }
 
+    btnRef.current!.disabled = true
+
     try {
       const client = container.brasilApiClient()
-      const cities = await client.getCitiesByDdd(ddd)
+      const [cities] = await Promise.all([client.getCitiesByDdd(ddd), delay(500)])
 
       if (errorMsg) {
         setErrorMsg('')
@@ -30,7 +35,8 @@ function CitiesFinderForm({ onSuccess, onError }: Props) {
     } catch (error: unknown) {
       console.error(error)
       setErrorMsg('Não foi possível buscar as cidades')
-      onError()
+    } finally {
+      btnRef.current!.disabled = false
     }
   }
 
@@ -56,8 +62,9 @@ function CitiesFinderForm({ onSuccess, onError }: Props) {
             }
           }}
         />
-        <button className="btn" onClick={findCitiesByDdd}>
-          Buscar
+        <button className="btn" ref={btnRef} onClick={findCitiesByDdd}>
+          <span>Buscar</span>
+          <i className="bx bx-loader-alt"></i>
         </button>
       </div>
       {errorMsg && <div className="errorMessage">{errorMsg}</div>}
