@@ -3,7 +3,7 @@ import container from '@/di-container'
 import { useState } from 'react'
 
 type Props = {
-  onSuccess: (ddd: string, cities: string[]) => void
+  onSuccess: (cities: string[]) => void
   onError: () => void
 }
 
@@ -26,7 +26,7 @@ function CitiesFinderForm(props: Props) {
         setErrorMsg('')
       }
 
-      props.onSuccess(ddd, cities)
+      props.onSuccess(cities)
     } catch (error: unknown) {
       console.error(error)
       setErrorMsg('Não foi possível buscar as cidades')
