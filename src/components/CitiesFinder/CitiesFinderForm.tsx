@@ -7,14 +7,14 @@ type Props = {
   onError: () => void
 }
 
-function CitiesFinderForm(props: Props) {
+function CitiesFinderForm({ onSuccess, onError }: Props) {
   const [errorMsg, setErrorMsg] = useState('')
   const [ddd, setDdd] = useState('')
 
   const findCitiesByDdd = async () => {
     if (ddd.length !== 2) {
       setErrorMsg('DDD deve conter exatamente 2 dígitos')
-      props.onError()
+      onError()
       return
     }
 
@@ -26,11 +26,11 @@ function CitiesFinderForm(props: Props) {
         setErrorMsg('')
       }
 
-      props.onSuccess(cities)
+      onSuccess(cities)
     } catch (error: unknown) {
       console.error(error)
       setErrorMsg('Não foi possível buscar as cidades')
-      props.onError()
+      onError()
     }
   }
 
