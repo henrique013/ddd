@@ -104,6 +104,7 @@ ddd/
 │   ├── services/       # Serviços e APIs
 │   ├── utils/          # Utilitários
 │   ├── di-container.ts # Container de injeção de dependências
+│   ├── errors.ts       # Erros personalizados
 │   ├── index.css       # Estilos globais
 │   └── main.tsx        # Ponto de entrada da aplicação
 ├── index.html          # Página HTML principal

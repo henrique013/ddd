@@ -2,20 +2,19 @@ import styles from '@/components/CitiesFinder/CitiesFinderForm.module.css'
 import container from '@/di-container'
 import { useRef, useState } from 'react'
 import { delay } from '@/utils/time'
+import { UserFriendlyError } from '@/errors.ts'
 
 type Props = {
-  onStart: () => void
   onSuccess: (cities: string[]) => void
+  onError: () => void
 }
 
-function CitiesFinderForm({ onStart, onSuccess }: Props) {
+function CitiesFinderForm({ onSuccess, onError }: Props) {
   const [errorMsg, setErrorMsg] = useState('')
   const [ddd, setDdd] = useState('')
   const btnRef = useRef<HTMLButtonElement>(null)
 
   const findCitiesByDdd = async () => {
-    onStart()
-
     if (ddd.length !== 2) {
       setErrorMsg('DDD deve conter exatamente 2 dígitos')
       return
@@ -33,8 +32,9 @@ function CitiesFinderForm({ onStart, onSuccess }: Props) {
 
       onSuccess(cities)
     } catch (error: unknown) {
-      console.error(error)
-      setErrorMsg('Não foi possível buscar as cidades')
+      const msg = error instanceof UserFriendlyError ? error.message : 'Ocorreu um erro inesperado'
+      setErrorMsg(msg)
+      onError()
     } finally {
       btnRef.current!.disabled = false
     }

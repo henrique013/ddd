@@ -1,3 +1,5 @@
+import { UserFriendlyError } from '@/errors.ts'
+
 export interface IBrasilApiClient {
   getCitiesByDdd(ddd: string): Promise<string[]>
 }
@@ -12,8 +14,16 @@ export class BrasilApiClient implements IBrasilApiClient {
   async getCitiesByDdd(ddd: string): Promise<string[]> {
     const url = `${this.baseUrl}/ddd/v1/${ddd}`
     const response = await fetch(url)
-    const data = await response.json()
-    const cities: string[] = data.cities
+
+    if (response.status === 404) {
+      throw new UserFriendlyError('DDD não encontrado')
+    }
+
+    if (!response.ok) {
+      throw new UserFriendlyError('O serviço está temporariamente indisponível')
+    }
+
+    const cities: string[] = (await response.json()).cities
 
     return cities.sort()
   }
