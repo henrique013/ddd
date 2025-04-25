@@ -4,6 +4,7 @@
  */
 
 import { BrasilApiClient, IBrasilApiClient } from '@/services/BrasilApiClient'
+import env from '@/env'
 
 const cache: Map<string, unknown> = new Map()
 
@@ -14,8 +15,7 @@ export type Container = {
 const container: Container = {
   brasilApiClient: () => {
     if (!cache.has('brasilApiClient')) {
-      const baseUrl = import.meta.env.VITE_API_URL
-      cache.set('brasilApiClient', new BrasilApiClient(baseUrl))
+      cache.set('brasilApiClient', new BrasilApiClient(env.API_URL))
     }
     return cache.get('brasilApiClient') as BrasilApiClient
   },

@@ -34,6 +34,7 @@ Esta seção deve incluir o propósito do projeto, principais funcionalidades e 
 - TypeScript
 - Vite
 - ESLint + Prettier
+- Zod
 
 ## ✨ Recursos e Diferenciais
 
@@ -116,6 +117,7 @@ ddd/
 │   ├── services/       # Serviços e APIs
 │   ├── utils/          # Utilitários
 │   ├── di-container.ts # Container de injeção de dependências
+│   ├── env.ts          # Variáveis de ambiente
 │   ├── errors.ts       # Erros personalizados
 │   ├── index.css       # Estilos globais
 │   └── main.tsx        # Ponto de entrada da aplicação
