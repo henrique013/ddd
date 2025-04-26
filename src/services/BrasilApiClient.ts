@@ -1,4 +1,5 @@
 import { UserFriendlyError } from '@/errors.ts'
+import { z } from 'zod'
 
 export interface IBrasilApiClient {
   getCitiesByDdd(ddd: string): Promise<string[]>
@@ -13,19 +14,29 @@ export class BrasilApiClient implements IBrasilApiClient {
 
   async getCitiesByDdd(ddd: string): Promise<string[]> {
     const url = `${this.baseUrl}/ddd/v1/${ddd}`
-    const response = await fetch(url)
+    const response = await this.fetch(url)
 
     if (response.status === 404) {
       throw new UserFriendlyError('DDD não encontrado')
     }
 
-    if (!response.ok) {
+    const json = await response.json()
+    const schema = z.object({
+      cities: z.array(z.string()),
+    })
+    const data = schema.parse(json)
+
+    return data.cities.sort()
+  }
+
+  private async fetch(url: string): Promise<Response> {
+    const response = await fetch(url)
+
+    if (!response.ok || response.status === 404) {
       throw new UserFriendlyError('O serviço está temporariamente indisponível')
     }
 
-    const cities: string[] = (await response.json()).cities
-
-    return cities.sort()
+    return response
   }
 }
 
