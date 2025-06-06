@@ -1,13 +1,10 @@
 import { z } from 'zod'
 
-const rawEnvSchema = z.object({
-  VITE_API_URL: z.string().url(),
+const envSchema = z.object({
+  API_BASE_URL: z.string().url(),
 })
 
-const rawEnv = rawEnvSchema.parse(import.meta.env)
-
-const env = {
-  API_URL: rawEnv.VITE_API_URL,
-} as const
-
-export default env
+/**
+ * The environment variables parsed from the process.env.
+ */
+export const env = envSchema.parse(process.env)
