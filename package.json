@@ -17,8 +17,8 @@
     "compile": "tsc --noEmit",
     "lint": "eslint .",
     "format": "prettier --write --cache .",
-    "tag": "tsx bin/scripts/tag.ts",
-    "postinstall": "tsx bin/scripts/postinstall.ts"
+    "tag": "node bin/scripts/tag.js",
+    "postinstall": "node bin/scripts/postinstall.js"
   },
   "dependencies": {
     "react": "^19.0.0",

@@ -9,7 +9,7 @@ export default tseslint.config(
   { ignores: ['dist', 'coverage'] },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended, eslintConfigPrettier],
-    files: ['**/*.{ts,tsx}'],
+    files: ['**/*.{ts,tsx,js,jsx}'],
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,

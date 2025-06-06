@@ -5,12 +5,12 @@ pre-commit:
 
     - name: compile
       glob:
-        - '**/*.ts'
+        - '**/*.{ts,tsx,js,jsx}'
         - 'tsconfig*.json'
       run: npm run compile
 
     - name: lint
       glob:
-        - '**/*.ts'
+        - '**/*.{ts,tsx,js,jsx}'
         - 'eslint.config.js'
       run: npm run lint
