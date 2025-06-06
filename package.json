@@ -13,8 +13,12 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "compile": "tsc --noEmit",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "format": "prettier --write --cache .",
+    "tag": "tsx bin/scripts/tag.ts",
+    "postinstall": "tsx bin/scripts/postinstall.ts"
   },
   "dependencies": {
     "react": "^19.0.0",
@@ -32,6 +36,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
+    "lefthook": "^1.11.13",
     "prettier": "^3.5.3",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.26.1",
