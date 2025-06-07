@@ -1,4 +1,4 @@
-import { UserFriendlyError } from '@app/errors.ts'
+import { NotFoundError, RuntimeError } from '@app/errors.ts'
 import { z } from 'zod'
 
 export interface IApiClient {
@@ -17,7 +17,7 @@ export class ApiClient implements IApiClient {
     const response = await this.fetch(url)
 
     if (response.status === 404) {
-      throw new UserFriendlyError('DDD não encontrado')
+      throw new NotFoundError('DDD não encontrado')
     }
 
     const schema = z.array(
@@ -39,7 +39,7 @@ export class ApiClient implements IApiClient {
     const response = await fetch(url)
 
     if (!response.ok && response.status !== 404) {
-      throw new UserFriendlyError('O serviço está temporariamente indisponível')
+      throw new RuntimeError('O serviço está temporariamente indisponível')
     }
 
     return response
