@@ -6,7 +6,7 @@
 
 ## 🌐 Acesso Online
 
-Você pode acessar a versão online do projeto [aqui](https://ddd-six-azure.vercel.app/).
+Você pode acessar a versão online do projeto [aqui](https://ddd.solidsistemas.com/).
 
 ## 🔎 Sobre o Projeto
 
