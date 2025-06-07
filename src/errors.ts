@@ -20,6 +20,11 @@ export abstract class AppError extends Error {
 export class NotFoundError extends AppError {}
 
 /**
+ * Error thrown when an invalid argument is provided.
+ */
+export class BadArgumentError extends AppError {}
+
+/**
  * Error thrown when an unexpected error occurs.
  */
 export class RuntimeError extends AppError {}

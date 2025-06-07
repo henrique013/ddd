@@ -1,4 +1,4 @@
-import { NotFoundError, RuntimeError } from '@app/errors.ts'
+import { BadArgumentError, NotFoundError, RuntimeError } from '@app/errors.ts'
 import { z } from 'zod'
 
 export interface IApiClient {
@@ -16,10 +16,6 @@ export class ApiClient implements IApiClient {
     const url = `${this.baseUrl}/cities/${ddd}`
     const response = await this.fetch(url)
 
-    if (response.status === 404) {
-      throw new NotFoundError('DDD não encontrado')
-    }
-
     const schema = z.array(
       z.object({
         id: z.number(),
@@ -30,6 +26,7 @@ export class ApiClient implements IApiClient {
     )
     const json = await response.json()
     const data = schema.parse(json)
+
     const cities = data.map((city) => city.name)
 
     return cities
@@ -38,10 +35,25 @@ export class ApiClient implements IApiClient {
   private async fetch(url: string): Promise<Response> {
     const response = await fetch(url)
 
-    if (!response.ok && response.status !== 404) {
-      throw new RuntimeError('O serviço está temporariamente indisponível')
+    if (response.ok) {
+      return response
     }
 
-    return response
+    const schema = z.object({
+      message: z.string(),
+      error: z.string(),
+      statusCode: z.number(),
+    })
+    const json = await response.json()
+    const data = schema.parse(json)
+
+    switch (data.statusCode) {
+      case 404:
+        throw new NotFoundError(data.message)
+      case 400:
+        throw new BadArgumentError(data.message)
+      default:
+        throw new RuntimeError('O serviço está temporariamente indisponível')
+    }
   }
 }
