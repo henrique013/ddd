@@ -1,8 +1,10 @@
 import styles from '@app/components/CitiesFinder/CitiesFinderForm.module.css'
-import container from '@app/di-container'
 import { useRef, useState } from 'react'
 import { delay } from '@app/utils/time'
 import { UserFriendlyError } from '@app/errors.ts'
+import { container } from '@app/container/container.ts'
+import { t } from '@app/container/tokens.ts'
+import { IApiClient } from '@app/services/api.ts'
 
 type Props = {
   onSuccess: (cities: string[]) => void
@@ -23,7 +25,7 @@ function CitiesFinderForm({ onSuccess, onError }: Props) {
     btnRef.current!.disabled = true
 
     try {
-      const client = container.brasilApiClient()
+      const client = container.resolve<IApiClient>(t.services.IApiClient)
       const [cities] = await Promise.all([client.getCitiesByDdd(ddd), delay(500)])
 
       if (errorMsg) {

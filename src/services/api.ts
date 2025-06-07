@@ -1,11 +1,11 @@
 import { UserFriendlyError } from '@app/errors.ts'
 import { z } from 'zod'
 
-export interface IBrasilApiClient {
+export interface IApiClient {
   getCitiesByDdd(ddd: string): Promise<string[]>
 }
 
-export class BrasilApiClient implements IBrasilApiClient {
+export class ApiClient implements IApiClient {
   private readonly baseUrl: string
 
   constructor(baseUrl: string) {
