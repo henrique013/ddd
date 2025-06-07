@@ -1,4 +1,4 @@
-import HomeRoot from '@/components/Home/HomeRoot'
+import HomeRoot from '@app/components/Home/HomeRoot'
 
 export const Home = {
   Root: HomeRoot,

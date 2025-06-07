@@ -1,5 +1,5 @@
 import { ReactNode, useState } from 'react'
-import { Theme, ThemeContext } from '@/contexts/Theme/ThemeContext'
+import { Theme, ThemeContext } from '@app/contexts/Theme/ThemeContext'
 
 const STORAGE_KEY = '@ddd:theme'
 

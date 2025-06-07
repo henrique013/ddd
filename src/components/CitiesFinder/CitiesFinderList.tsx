@@ -1,4 +1,4 @@
-import styles from '@/components/CitiesFinder/CitiesFinderList.module.css'
+import styles from '@app/components/CitiesFinder/CitiesFinderList.module.css'
 
 type Props = {
   cities: string[]

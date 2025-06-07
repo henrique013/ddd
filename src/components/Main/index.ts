@@ -1,4 +1,4 @@
-import MainRoot from '@/components/Main/MainRoot'
+import MainRoot from '@app/components/Main/MainRoot'
 
 export const Main = {
   Root: MainRoot,

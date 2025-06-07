@@ -1,5 +1,5 @@
-import styles from '@/components/CitiesFinder/CitiesFinderRoot.module.css'
-import { CitiesFinder } from '@/components/CitiesFinder'
+import styles from '@app/components/CitiesFinder/CitiesFinderRoot.module.css'
+import { CitiesFinder } from '@app/components/CitiesFinder'
 import { useState } from 'react'
 
 function CitiesFinderRoot() {

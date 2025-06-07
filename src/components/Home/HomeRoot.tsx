@@ -1,5 +1,5 @@
-import styles from '@/components/Home/HomeRoot.module.css'
-import { useTheme } from '@/hooks/useTheme.ts'
+import styles from '@app/components/Home/HomeRoot.module.css'
+import { useTheme } from '@app/hooks/useTheme.ts'
 import { ReactNode } from 'react'
 
 type Props = {

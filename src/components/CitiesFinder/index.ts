@@ -1,6 +1,6 @@
-import CitiesFinderRoot from '@/components/CitiesFinder/CitiesFinderRoot'
-import CitiesFinderList from '@/components/CitiesFinder/CitiesFinderList'
-import CitiesFinderForm from '@/components/CitiesFinder/CitiesFinderForm'
+import CitiesFinderRoot from '@app/components/CitiesFinder/CitiesFinderRoot'
+import CitiesFinderList from '@app/components/CitiesFinder/CitiesFinderList'
+import CitiesFinderForm from '@app/components/CitiesFinder/CitiesFinderForm'
 
 export const CitiesFinder = {
   Root: CitiesFinderRoot,

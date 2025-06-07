@@ -1,9 +1,9 @@
-import { Home } from '@/components/Home'
-import { Header } from '@/components/Header'
-import { Main } from '@/components/Main'
-import { Footer } from '@/components/Footer'
-import { CitiesFinder } from '@/components/CitiesFinder'
-import { ThemeProvider } from '@/contexts/Theme/ThemeProvider'
+import { Home } from '@app/components/Home'
+import { Header } from '@app/components/Header'
+import { Main } from '@app/components/Main'
+import { Footer } from '@app/components/Footer'
+import { CitiesFinder } from '@app/components/CitiesFinder'
+import { ThemeProvider } from '@app/contexts/Theme/ThemeProvider'
 
 function App() {
   return (

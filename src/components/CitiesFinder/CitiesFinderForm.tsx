@@ -1,8 +1,8 @@
-import styles from '@/components/CitiesFinder/CitiesFinderForm.module.css'
-import container from '@/di-container'
+import styles from '@app/components/CitiesFinder/CitiesFinderForm.module.css'
+import container from '@app/di-container'
 import { useRef, useState } from 'react'
-import { delay } from '@/utils/time'
-import { UserFriendlyError } from '@/errors.ts'
+import { delay } from '@app/utils/time'
+import { UserFriendlyError } from '@app/errors.ts'
 
 type Props = {
   onSuccess: (cities: string[]) => void

@@ -1,4 +1,4 @@
-import styles from '@/components/Header/HeaderRoot.module.css'
+import styles from '@app/components/Header/HeaderRoot.module.css'
 import { ReactNode } from 'react'
 
 type Props = {

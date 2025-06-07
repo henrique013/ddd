@@ -1,4 +1,4 @@
-import styles from '@/components/Main/MainRoot.module.css'
+import styles from '@app/components/Main/MainRoot.module.css'
 import { ReactNode } from 'react'
 
 type Props = {

@@ -1,4 +1,4 @@
-import styles from '@/components/Footer/FooterRoot.module.css'
+import styles from '@app/components/Footer/FooterRoot.module.css'
 
 function FooterRoot() {
   return (

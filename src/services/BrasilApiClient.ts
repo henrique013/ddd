@@ -1,4 +1,4 @@
-import { UserFriendlyError } from '@/errors.ts'
+import { UserFriendlyError } from '@app/errors.ts'
 import { z } from 'zod'
 
 export interface IBrasilApiClient {

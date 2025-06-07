@@ -1,4 +1,4 @@
-import FooterRoot from '@/components/Footer/FooterRoot'
+import FooterRoot from '@app/components/Footer/FooterRoot'
 
 export const Footer = {
   Root: FooterRoot,

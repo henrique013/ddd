@@ -3,8 +3,8 @@
  * This file centralizes dependencies instantiation and enables singleton pattern through caching.
  */
 
-import { BrasilApiClient, IBrasilApiClient } from '@/services/BrasilApiClient'
-import { env } from '@/env'
+import { BrasilApiClient, IBrasilApiClient } from '@app/services/BrasilApiClient'
+import { env } from '@app/env'
 
 const cache: Map<string, unknown> = new Map()
 

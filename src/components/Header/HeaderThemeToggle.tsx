@@ -1,5 +1,5 @@
-import styles from '@/components/Header/HeaderThemeToggle.module.css'
-import { useTheme } from '@/hooks/useTheme.ts'
+import styles from '@app/components/Header/HeaderThemeToggle.module.css'
+import { useTheme } from '@app/hooks/useTheme.ts'
 
 function HeaderThemeToggle() {
   const { theme, toggleTheme } = useTheme()
