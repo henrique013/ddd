@@ -111,7 +111,7 @@ Principais diretórios e arquivos:
 ```
 ddd/
 ├── public/             # Arquivos estáticos
-├── src/
+├── src/                # Código fonte
 │   ├── components/     # Componentes React reutilizáveis
 │   ├── container/      # Container de injeção de dependências
 │   ├── contexts/       # Contextos React
