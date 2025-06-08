@@ -25,6 +25,8 @@ O sistema abrange todos os 67 DDDs brasileiros, desde grandes centros urbanos co
 
 ## ✨ Recursos e Diferenciais
 
+Aqui estão alguns dos recursos e diferenciais mais relevantes do projeto:
+
 - **📱 Mobile First:** Design otimizado prioritariamente para dispositivos móveis, garantindo uma experiência perfeita em smartphones e tablets
 - **🌙 Dark Theme:** Suporte completo a tema escuro, que se adapta automaticamente às preferências do sistema do usuário
 - **🧹 Interface Minimalista:** Design limpo e intuitivo focado na usabilidade
