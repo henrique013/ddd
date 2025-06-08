@@ -92,6 +92,8 @@ O projeto estará disponível em [http://localhost:5173](http://localhost:5173)
 
 ## ⌨️ Comandos Disponíveis
 
+Estes são os comandos disponíveis para o projeto:
+
 - `npm run dev` - Inicia o servidor de desenvolvimento
 - `npm run build` - Gera uma versão otimizada para produção
 - `npm run preview` - Previsualiza a versão de produção localmente _(requer execução prévia de `npm run build`)_
