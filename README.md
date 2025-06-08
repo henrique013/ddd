@@ -6,34 +6,34 @@
 
 ## 🌐 Acesso Online
 
-Você pode acessar a versão online do projeto [aqui](https://ddd.solidsistemas.com/).
+Acesse a versão online do projeto [aqui](https://ddd.solidsistemas.com/).
 
 ## 🔎 Sobre o Projeto
 
-O DDD Brasil é uma aplicação web moderna e intuitiva que permite aos usuários consultar rapidamente quais cidades pertencem a cada DDD (Discagem Direta à Distância) no território brasileiro.
+O DDD Brasil é uma aplicação web moderna e intuitiva que permite consultar rapidamente quais cidades pertencem a cada DDD (Discagem Direta à Distância) no território brasileiro.
 
-Com uma interface clean e responsiva, o usuário pode simplesmente digitar um código DDD no campo de busca e obter instantaneamente uma lista completa de todas as cidades associadas àquele código de área telefônico.
+Com uma interface clean e responsiva, basta digitar um código DDD no campo de busca para obter instantaneamente uma lista completa de todas as cidades associadas àquele código de área telefônico.
 
 Esta ferramenta é especialmente útil para:
 
-- 🚚 Profissionais que trabalham com logística e entregas
-- 📊 Equipes de marketing que planejam campanhas regionalizadas
+- 🚚 Profissionais de logística e entregas
+- 📊 Equipes de marketing com campanhas regionalizadas
 - 🏢 Empresas com atendimento segmentado por região
-- 👥 Qualquer pessoa que precise identificar a localização geográfica de um número telefônico
+- 👥 Pessoas que precisam identificar a localização geográfica de um número telefônico
 
 O sistema abrange todos os 67 DDDs brasileiros, desde grandes centros urbanos como São Paulo (11), Rio de Janeiro (21) e Belo Horizonte (31), até regiões mais remotas do território nacional.
 
 ## ✨ Recursos e Diferenciais
 
-Aqui estão alguns dos recursos e diferenciais mais relevantes do projeto:
+Principais recursos e diferenciais do projeto:
 
 - **📱 Mobile First:** Design otimizado prioritariamente para dispositivos móveis, garantindo uma experiência perfeita em smartphones e tablets
-- **🌙 Dark Theme:** Suporte completo a tema escuro, que se adapta automaticamente às preferências do sistema do usuário
+- **🌙 Dark Theme:** Suporte completo a tema escuro, que se adapta automaticamente às preferências do sistema
 - **🧹 Interface Minimalista:** Design limpo e intuitivo focado na usabilidade
 
-## 🛠️ Tecnologias e Bibliotecas Utilizadas
+## 🛠️ Tecnologias e Bibliotecas
 
-Esta é a lista das principais tecnologias e bibliotecas utilizadas no projeto:
+Principais tecnologias e bibliotecas utilizadas:
 
 - [React 19](https://react.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
@@ -46,14 +46,14 @@ Esta é a lista das principais tecnologias e bibliotecas utilizadas no projeto:
 
 ## 📋 Pré-requisitos
 
-Antes de começar, você precisa ter instalado em sua máquina:
+Para executar o projeto, você precisa ter instalado:
 
 - [Node.js 20+](https://nodejs.org/)
 - [Git](https://git-scm.com/)
 
 ## 🚀 Instalação
 
-Siga estes passos para configurar o ambiente de desenvolvimento:
+Siga estes passos para configurar o ambiente:
 
 1. Clone o repositório
 
@@ -72,11 +72,9 @@ Siga estes passos para configurar o ambiente de desenvolvimento:
    npm install
    ```
 
-## 🔐 Configuração de Variáveis de Ambiente
+## 🔐 Configuração de Ambiente
 
-Para que a aplicação funcione corretamente, é necessário configurar as variáveis de ambiente.
-
-Copie o arquivo `.env.example` para um novo arquivo chamado `.env`:
+Para que a aplicação funcione corretamente, configure as variáveis de ambiente:
 
 ```bash
 cp .env.example .env
@@ -94,7 +92,7 @@ O projeto estará disponível em [http://localhost:5173](http://localhost:5173)
 
 ## ⌨️ Comandos Disponíveis
 
-Estes são os comandos disponíveis para o projeto:
+Comandos principais do projeto:
 
 - `npm run dev` - Inicia o servidor de desenvolvimento
 - `npm run build` - Gera uma versão otimizada para produção
@@ -103,12 +101,12 @@ Estes são os comandos disponíveis para o projeto:
 - `npm run lint` - Executa a verificação de linting no código
 - `npm run format` - Formata o código usando o Prettier
 - `npm run tag` - Cria uma tag para o projeto seguindo o padrão SemVer (MAJOR.MINOR.PATCH). Ex: `npm run tag -- patch`
-  - Dica: Se quiser resetar a versão para 1.0.0, você pode editar manualmente o campo "version" no package.json
+  - Dica: Para resetar a versão para 1.0.0, edite manualmente o campo "version" no package.json
 - `npm run postinstall` - Executa scripts de pós-instalação
 
 ## 📁 Estrutura do Projeto
 
-Estes são os principais arquivos e diretórios do projeto:
+Principais diretórios e arquivos:
 
 ```
 ddd/
@@ -131,7 +129,7 @@ ddd/
 
 ## 📧 Contato
 
-Para entrar em contato comigo, você pode me encontrar nas seguintes redes sociais:
+Entre em contato através das redes sociais:
 
 - LinkedIn: [Henrique Alves](https://www.linkedin.com/in/henrique-alves-a44b99135)
 - GitHub: [henrique013](https://github.com/henrique013)
