@@ -23,6 +23,12 @@ Esta ferramenta é especialmente útil para:
 
 O sistema abrange todos os 67 DDDs brasileiros, desde grandes centros urbanos como São Paulo (11), Rio de Janeiro (21) e Belo Horizonte (31), até regiões mais remotas do território nacional.
 
+## ✨ Recursos e Diferenciais
+
+- **📱 Mobile First:** Design otimizado prioritariamente para dispositivos móveis, garantindo uma experiência perfeita em smartphones e tablets
+- **🌙 Dark Theme:** Suporte completo a tema escuro, que se adapta automaticamente às preferências do sistema do usuário
+- **🧹 Interface Minimalista:** Design limpo e intuitivo focado na usabilidade
+
 ## 🛠️ Tecnologias e Bibliotecas Utilizadas
 
 - [React 19](https://react.dev/)
@@ -33,12 +39,6 @@ O sistema abrange todos os 67 DDDs brasileiros, desde grandes centros urbanos co
 - [Zod](https://zod.dev/)
 - [Tsyringe](https://github.com/microsoft/tsyringe)
 - [Lefthook](https://github.com/evilmartians/lefthook)
-
-## ✨ Recursos e Diferenciais
-
-- **📱 Mobile First:** Design otimizado prioritariamente para dispositivos móveis, garantindo uma experiência perfeita em smartphones e tablets
-- **🌙 Dark Theme:** Suporte completo a tema escuro, que se adapta automaticamente às preferências do sistema do usuário
-- **🧹 Interface Minimalista:** Design limpo e intuitivo focado na usabilidade
 
 ## 📋 Pré-requisitos
 
