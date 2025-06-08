@@ -51,7 +51,7 @@ Para executar o projeto, você precisa ter instalado:
 - [Node.js 20+](https://nodejs.org/)
 - [Git](https://git-scm.com/)
 
-## 🚀 Instalação
+## ⚙️ Instalação
 
 Siga estes passos para configurar o ambiente:
 
