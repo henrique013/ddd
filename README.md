@@ -31,6 +31,8 @@ O sistema abrange todos os 67 DDDs brasileiros, desde grandes centros urbanos co
 
 ## 🛠️ Tecnologias e Bibliotecas Utilizadas
 
+Esta é a lista das principais tecnologias e bibliotecas utilizadas no projeto:
+
 - [React 19](https://react.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Vite](https://vitejs.dev/)
@@ -124,6 +126,8 @@ ddd/
 ```
 
 ## 📧 Contato
+
+Para entrar em contato comigo, você pode me encontrar nas seguintes redes sociais:
 
 - LinkedIn: [Henrique Alves](https://www.linkedin.com/in/henrique-alves-a44b99135)
 - GitHub: [henrique013](https://github.com/henrique013)
