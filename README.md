@@ -44,8 +44,9 @@ O sistema abrange todos os 67 DDDs brasileiros, desde grandes centros urbanos co
 
 Antes de começar, você precisa ter instalado em sua máquina:
 
-- [Node.js](https://nodejs.org/) (versão 22 ou superior)
-- npm (normalmente vem com o Node.js) ou [pnpm](https://pnpm.io/) ou [Yarn](https://yarnpkg.com/)
+- [Node.js 20+](https://nodejs.org/)
+- [NPM](https://www.npmjs.com/)
+- [Git](https://git-scm.com/)
 
 ## 🚀 Instalação
 
