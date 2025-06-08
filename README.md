@@ -23,13 +23,15 @@ Esta ferramenta é especialmente útil para:
 
 O sistema abrange todos os 67 DDDs brasileiros, desde grandes centros urbanos como São Paulo (11), Rio de Janeiro (21) e Belo Horizonte (31), até regiões mais remotas do território nacional.
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias e Bibliotecas Utilizadas
 
-- React 19
-- TypeScript
-- Vite
-- ESLint + Prettier
-- Zod
+- [React 19](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/)
+- [Zod](https://zod.dev/)
+- [Tsyringe](https://github.com/microsoft/tsyringe)
+- [Lefthook](https://github.com/evilmartians/lefthook)
 
 ## ✨ Recursos e Diferenciais
 
