@@ -16,7 +16,7 @@ Com uma interface clean e responsiva, basta digitar um código DDD no campo de b
 
 Esta ferramenta é especialmente útil para:
 
-- 🚚 Profissionais de logística e entregas
+- 🚚 Profissionais de logística e entregas 
 - 📊 Equipes de marketing com campanhas regionalizadas
 - 🏢 Empresas com atendimento segmentado por região
 - 👥 Pessoas que precisam identificar a localização geográfica de um número telefônico
