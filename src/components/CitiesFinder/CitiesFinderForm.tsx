@@ -1,7 +1,7 @@
 import styles from '@app/components/CitiesFinder/CitiesFinderForm.module.css'
 import { useRef, useState } from 'react'
 import { delay } from '@app/utils/time'
-import { AppError } from '@app/errors.ts'
+import { BaseError } from '@app/errors.ts'
 import { container } from '@app/container/container.ts'
 import { t } from '@app/container/tokens.ts'
 import { IApiClient } from '@app/services/api.ts'
@@ -34,7 +34,7 @@ function CitiesFinderForm({ onSuccess, onError }: Props) {
 
       onSuccess(cities)
     } catch (error: unknown) {
-      const msg = error instanceof AppError ? error.message : 'Ocorreu um erro inesperado'
+      const msg = error instanceof BaseError ? error.message : 'Ocorreu um erro inesperado'
       setErrorMsg(msg)
       onError()
     } finally {

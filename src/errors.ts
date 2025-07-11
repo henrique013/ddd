@@ -1,7 +1,7 @@
 /**
  * Base class for all application errors.
  */
-export abstract class AppError extends Error {
+export abstract class BaseError extends Error {
   /**
    * @param message - The error message to be displayed to the user.
    */
@@ -17,14 +17,14 @@ export abstract class AppError extends Error {
 /**
  * Error thrown when a resource is not found.
  */
-export class NotFoundError extends AppError {}
+export class NotFoundError extends BaseError {}
 
 /**
  * Error thrown when an invalid argument is provided.
  */
-export class BadArgumentError extends AppError {}
+export class BadArgumentError extends BaseError {}
 
 /**
  * Error thrown when an unexpected error occurs.
  */
-export class RuntimeError extends AppError {}
+export class RuntimeError extends BaseError {}
